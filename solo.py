@@ -9,7 +9,7 @@ import sys
 
 def calcular_ph(dados):
     """
-    Calcula o pH do solo com base nos nutrientes e matéria orgânica
+    Calcula o pH dos solos com base nos nutrientes e matéria orgânica
     Fórmula adaptada para solos tropicais
     """
     try:
