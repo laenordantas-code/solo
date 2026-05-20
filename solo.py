@@ -118,281 +118,269 @@ st.set_page_config(
 )
 
 # ============================================================================
-# CSS PERSONALIZADO - DESIGN ESCURO PROFISSIONAL
+# CSS PERSONALIZADO - DESIGN PREMIUM MODERNO
 # ============================================================================
 
 st.markdown("""
 <style>
 
 /* ==========================================================================
-   FUNDO GERAL
+   IMPORTAÇÃO DE FONTE PREMIUM
+========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
+
+/* ==========================================================================
+   FUNDO PRINCIPAL - GRADIENTE SOFISTICADO
 ========================================================================== */
 
 .stApp {
-    background: #050816 !important;
-    color: #ffffff !important;
-    font-family: 'Segoe UI', sans-serif !important;
+    background: radial-gradient(circle at 0% 0%, #0a0f1e, #060912) !important;
+    font-family: 'Inter', sans-serif !important;
 }
 
 .main > div {
-    background: #050816 !important;
+    background: transparent !important;
 }
 
 /* ==========================================================================
    TEXTOS GERAIS
 ========================================================================== */
 
-html, body, p, span, div, li {
-    color: #ffffff !important;
+html, body, p, span, div, li, label {
+    color: #e2e8f0 !important;
 }
 
 /* ==========================================================================
-   TITULOS
+   TITULOS E SUBTITULOS
 ========================================================================== */
 
 h1, h2, h3, h4, h5, h6 {
-    color: #4da6ff !important;
-    font-weight: 700 !important;
+    background: linear-gradient(135deg, #c084fc, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
 }
 
 /* ==========================================================================
-   SIDEBAR
+   SIDEBAR - VIDRO FOSCO (GLASSMORPHISM)
 ========================================================================== */
 
 section[data-testid="stSidebar"] {
-    background: #0b132b !important;
-    border-right: 2px solid #2563eb !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    border-right: 1px solid rgba(96, 165, 250, 0.2) !important;
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.3) !important;
 }
 
 section[data-testid="stSidebar"] * {
-    color: #ffffff !important;
+    color: #f1f5f9 !important;
 }
 
 /* ==========================================================================
-   INPUTS
+   INPUTS - DESIGN LUXO
 ========================================================================== */
 
 .stTextInput input,
 .stNumberInput input,
 textarea,
 input {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border: 2px solid #2563eb !important;
-    border-radius: 10px !important;
-    padding: 10px !important;
-    font-weight: 600 !important;
+    background: rgba(30, 41, 59, 0.9) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(96, 165, 250, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 12px 16px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTextInput input:focus,
+.stNumberInput input:focus,
+textarea:focus,
+input:focus {
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2) !important;
+    outline: none !important;
 }
 
 /* ==========================================================================
-   SELECTBOX
+   SELECTBOX PREMIUM
 ========================================================================== */
 
 .stSelectbox div[data-baseweb="select"] {
-    background-color: #ffffff !important;
-    border-radius: 10px !important;
-    border: 2px solid #2563eb !important;
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(96, 165, 250, 0.3) !important;
 }
 
 .stSelectbox span {
-    color: #000000 !important;
-    font-weight: 600 !important;
-}
-
-/* ==========================================================================
-   LABELS
-========================================================================== */
-
-label {
-    color: #dbeafe !important;
-    font-weight: 600 !important;
-}
-
-/* ==========================================================================
-   BOTÕES
-========================================================================== */
-
-.stButton button {
-    background: linear-gradient(135deg, #2563eb, #1e40af) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 12px !important;
-    padding: 0.7rem 1.5rem !important;
-    font-weight: bold !important;
-    transition: 0.3s ease !important;
-}
-
-.stButton button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
-}
-
-/* ==========================================================================
-   CARD RESULTADO
-========================================================================== */
-
-.result-card {
-    background: linear-gradient(145deg, #0f172a, #111827) !important;
-    border: 2px solid #2563eb !important;
-    border-radius: 18px !important;
-    padding: 25px !important;
-    margin-top: 20px !important;
-    box-shadow: 0 0 20px rgba(37,99,235,0.25) !important;
-}
-
-.result-card h2 {
-    color: #60a5fa !important;
-    font-size: 2rem !important;
-    font-weight: 800 !important;
-}
-
-.result-card p {
     color: #ffffff !important;
-    font-size: 1.15rem !important;
     font-weight: 500 !important;
 }
 
-.result-number {
-    color: #ffffff !important;
-    font-size: 2.8rem !important;
-    font-weight: 900 !important;
+/* ==========================================================================
+   BOTÕES - EFEITO NEON
+========================================================================== */
+
+.stButton button {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 40px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3) !important;
+}
+
+.stButton button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px 0 rgba(139, 92, 246, 0.4) !important;
 }
 
 /* ==========================================================================
-   CAIXAS DOS RESULTADOS PRINCIPAIS
+   CARDS PRINCIPAIS (RESULTADOS)
+========================================================================== */
+
+.result-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.5)) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(96, 165, 250, 0.25) !important;
+    border-radius: 28px !important;
+    padding: 28px !important;
+    margin-top: 20px !important;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.result-card h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 12px !important;
+}
+
+/* ==========================================================================
+   CAIXAS DE MÉTRICAS
 ========================================================================== */
 
 .result-box {
-    background: linear-gradient(145deg, #0f172a, #111827) !important;
-    border: 2px solid #2563eb !important;
-    border-radius: 18px !important;
-    padding: 22px !important;
-    margin-bottom: 15px !important;
-    box-shadow: 0 0 18px rgba(37,99,235,0.18) !important;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6)) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(96, 165, 250, 0.2) !important;
+    border-radius: 24px !important;
+    padding: 20px !important;
+    margin-bottom: 18px !important;
     transition: all 0.3s ease !important;
     text-align: center !important;
 }
 
 .result-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 28px rgba(96,165,250,0.35) !important;
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.5) !important;
+    box-shadow: 0 12px 28px -8px rgba(139, 92, 246, 0.3) !important;
 }
 
 .result-title {
-    color: #93c5fd !important;
-    font-size: 1.15rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 15px !important;
+    color: #94a3b8 !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 12px !important;
 }
 
 .result-value {
-    color: #ffffff !important;
-    font-size: 2.3rem !important;
+    background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    font-size: 2.5rem !important;
     font-weight: 900 !important;
-    margin-bottom: 8px !important;
-}
-
-.result-unit {
-    color: #cbd5e1 !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
 }
 
 /* ==========================================================================
-   METRICS STREAMLIT
+   METRICS STREAMLIT PERSONALIZADAS
 ========================================================================== */
 
 div[data-testid="stMetric"] {
-    background: #111827 !important;
-    border: 2px solid #2563eb !important;
-    border-radius: 16px !important;
-    padding: 1rem !important;
-    box-shadow: 0 0 15px rgba(37,99,235,0.15);
+    background: rgba(15, 23, 42, 0.7) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(96, 165, 250, 0.2) !important;
+    border-radius: 20px !important;
+    padding: 1.2rem !important;
 }
 
 div[data-testid="stMetricLabel"] {
-    color: #93c5fd !important;
-    font-weight: 700 !important;
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
 }
 
 div[data-testid="stMetricValue"] {
-    color: #ffffff !important;
+    background: linear-gradient(135deg, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
     font-size: 2rem !important;
     font-weight: 900 !important;
 }
 
-div[data-testid="stMetricDelta"] {
-    color: #22c55e !important;
-}
-
 /* ==========================================================================
-   DATAFRAME
+   DATAFRAME - DESIGN MODERNO
 ========================================================================== */
 
 .dataframe {
-    background-color: #ffffff !important;
-    border-radius: 12px !important;
+    background: rgba(15, 23, 42, 0.7) !important;
+    border-radius: 20px !important;
     overflow: hidden !important;
+    border: 1px solid rgba(96, 165, 250, 0.2) !important;
 }
 
 .dataframe th {
-    background: #1e3a8a !important;
-    color: white !important;
-    font-weight: bold !important;
+    background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+    color: #c084fc !important;
+    font-weight: 700 !important;
+    padding: 12px !important;
 }
 
 .dataframe td {
-    background: #ffffff !important;
-    color: #000000 !important;
+    background: rgba(30, 41, 59, 0.5) !important;
+    color: #e2e8f0 !important;
+    padding: 10px !important;
 }
 
 /* ==========================================================================
-   ALERTAS
+   ALERTAS E INFOS
 ========================================================================== */
 
 .stAlert {
-    border-radius: 14px !important;
+    border-radius: 20px !important;
     border: none !important;
-    font-weight: 600 !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
 }
 
 /* ==========================================================================
-   EXPANDER
+   EXPANDER PREMIUM
 ========================================================================== */
 
 .streamlit-expanderHeader {
-    background: #1e3a8a !important;
-    color: white !important;
-    border-radius: 10px !important;
-    font-weight: bold !important;
+    background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+    color: #c084fc !important;
+    border-radius: 16px !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(96, 165, 250, 0.2) !important;
 }
 
 .streamlit-expanderContent {
-    background: #0f172a !important;
-    border-radius: 0 0 10px 10px !important;
-}
-
-.streamlit-expanderContent p,
-.streamlit-expanderContent li {
-    color: #ffffff !important;
-}
-
-/* ==========================================================================
-   RADIO BUTTONS
-========================================================================== */
-
-.stRadio label {
-    color: #ffffff !important;
-}
-
-/* ==========================================================================
-   LINHA
-========================================================================== */
-
-hr {
-    border: none !important;
-    height: 2px !important;
-    background: linear-gradient(to right, #2563eb, #60a5fa) !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    border-radius: 0 0 16px 16px !important;
+    border: 1px solid rgba(96, 165, 250, 0.1) !important;
+    border-top: none !important;
 }
 
 /* ==========================================================================
@@ -400,103 +388,78 @@ hr {
 ========================================================================== */
 
 button[data-baseweb="tab"] {
-    background-color: #111827 !important;
-    color: #ffffff !important;
-    border-radius: 10px 10px 0 0 !important;
+    background: transparent !important;
+    color: #94a3b8 !important;
+    border-radius: 40px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
 }
 
 button[data-baseweb="tab"][aria-selected="true"] {
-    background-color: #2563eb !important;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
     color: white !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
 }
 
 /* ==========================================================================
-   SCROLLBAR
+   LINHA DIVISÓRIA
+========================================================================== */
+
+hr {
+    border: none !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, #3b82f6, #8b5cf6, #c084fc, transparent) !important;
+    margin: 2rem 0 !important;
+}
+
+/* ==========================================================================
+   SCROLLBAR PERSONALIZADA
 ========================================================================== */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
     background: #0f172a;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2563eb;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #60a5fa;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
 }
 
-</style>
-""", unsafe_allow_html=True)
+/* ==========================================================================
+   CARD HEADER PRINCIPAL
+========================================================================== */
 
-# =============================================================
-# CSS ADICIONAL - CARDS MÉTRICOS E BARRA DE PROGRESSO
-# =============================================================
-
-st.markdown("""
-<style>
-
-.metric-card {
-    background: linear-gradient(145deg, #111827, #1f2937);
-    border: 2px solid #2563eb;
-    border-radius: 18px;
-    padding: 20px;
+.main-header {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.1));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 32px;
+    padding: 2rem;
+    margin-bottom: 2rem;
     text-align: center;
-    box-shadow: 0 0 15px rgba(37,99,235,0.2);
-    margin-bottom: 15px;
-}
-
-.metric-card h3 {
-    color: #93c5fd;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.metric-card h2 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.metric-card small {
-    color: #cbd5e1;
-}
-
-.progress-container {
-    width: 100%;
-    background-color: #1f2937;
-    border-radius: 30px;
-    overflow: hidden;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    border: 2px solid #2563eb;
-}
-
-.progress-bar {
-    background: linear-gradient(90deg, #2563eb, #60a5fa);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-weight: bold;
-    font-size: 1rem;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ============================================================================
-# CABECALHO
+# CABECALHO PREMIUM
 # ============================================================================
 
 st.markdown("""
-<div style="background: linear-gradient(135deg, #1a5f3e, #2ecc71); padding: 2rem; border-radius: 20px; text-align: center; margin-bottom: 2rem;">
-    <h1 style="color: white;">🌾 Classificador Inteligente de Fertilidade do Solo</h1>
-    <p style="font-size: 1.2rem; color: white;">Baseado no Sistema Brasileiro de Classificacao de Solos (SiBCS) - Embrapa</p>
+<div class="main-header">
+    <h1 style="background: linear-gradient(135deg, #c084fc, #60a5fa); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.5rem; margin-bottom: 0.5rem;">🌾 Classificador Inteligente de Fertilidade do Solo</h1>
+    <p style="color: #94a3b8; font-size: 1.1rem;">Baseado no Sistema Brasileiro de Classificação de Solos (SiBCS) - Embrapa</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -505,16 +468,18 @@ st.markdown("""
 # ============================================================================
 
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/2934/2934128.png", width=80)
+    st.markdown("<div style='text-align: center; margin-bottom: 1rem;'>", unsafe_allow_html=True)
+    st.image("https://cdn-icons-png.flaticon.com/512/2934/2934128.png", width=70)
+    st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("### 📊 Sobre o Sistema")
     st.markdown("""
-    Este classificador utiliza parametros do **SiBCS (Embrapa)** para:
-    - ✅ Avaliacao da fertilidade do solo
-    - ✅ Classificacao agricola
-    - ✅ Recomendacao de calagem
-    - ✅ Relatorios tecnicos
-    - ✅ Calculo de CTC e saturacao por bases
+    Este classificador utiliza parâmetros do **SiBCS (Embrapa)** para:
+    - ✅ Avaliação da fertilidade do solo
+    - ✅ Classificação agrícola
+    - ✅ Recomendação de calagem
+    - ✅ Relatórios técnicos
+    - ✅ Cálculo de CTC e saturação por bases
     """)
 
     st.markdown("---")
@@ -539,7 +504,7 @@ with st.sidebar:
             st.caption("Instale joblib para ativar a IA")
 
     st.markdown("---")
-    st.caption("Versao 3.0")
+    st.caption("Versão 3.0 — Design Premium")
     st.caption("Desenvolvido em Streamlit")
 
 # ============================================================================
@@ -560,9 +525,9 @@ menu = st.radio(
     "Navegação",
     [
         "📊 1. Dados do Solo",
-        "🌱 2. Classificacao",
-        "📈 3. Relatorio",
-        "ℹ️ 4. Metodos"
+        "🌱 2. Classificação",
+        "📈 3. Relatório",
+        "ℹ️ 4. Métodos"
     ],
     horizontal=True,
     label_visibility="collapsed"
@@ -575,11 +540,11 @@ menu = st.radio(
 necessidades_culturas = {
     "Soja": {"v_desejado": 60, "ph_min": 5.5, "ph_max": 6.5, "p_min": 15, "k_min": 0.35},
     "Milho": {"v_desejado": 65, "ph_min": 5.5, "ph_max": 6.5, "p_min": 20, "k_min": 0.40},
-    "Feijao": {"v_desejado": 65, "ph_min": 5.5, "ph_max": 6.5, "p_min": 20, "k_min": 0.35},
-    "Cafe": {"v_desejado": 70, "ph_min": 5.5, "ph_max": 6.5, "p_min": 25, "k_min": 0.40},
+    "Feijão": {"v_desejado": 65, "ph_min": 5.5, "ph_max": 6.5, "p_min": 20, "k_min": 0.35},
+    "Café": {"v_desejado": 70, "ph_min": 5.5, "ph_max": 6.5, "p_min": 25, "k_min": 0.40},
     "Pastagem": {"v_desejado": 50, "ph_min": 5.0, "ph_max": 6.0, "p_min": 10, "k_min": 0.25},
-    "Algodao": {"v_desejado": 70, "ph_min": 5.5, "ph_max": 6.5, "p_min": 25, "k_min": 0.45},
-    "Cana-de-acucar": {"v_desejado": 60, "ph_min": 5.5, "ph_max": 6.5, "p_min": 15, "k_min": 0.30},
+    "Algodão": {"v_desejado": 70, "ph_min": 5.5, "ph_max": 6.5, "p_min": 25, "k_min": 0.45},
+    "Cana-de-açúcar": {"v_desejado": 60, "ph_min": 5.5, "ph_max": 6.5, "p_min": 15, "k_min": 0.30},
     "Sorgo": {"v_desejado": 55, "ph_min": 5.2, "ph_max": 6.2, "p_min": 12, "k_min": 0.30},
     "Trigo": {"v_desejado": 65, "ph_min": 5.5, "ph_max": 6.5, "p_min": 18, "k_min": 0.35},
     "Tomate": {"v_desejado": 80, "ph_min": 6.0, "ph_max": 6.8, "p_min": 30, "k_min": 0.50},
@@ -589,13 +554,12 @@ necessidades_culturas = {
 }
 
 # ============================================================================
-# FUNÇÃO PARA PREDIÇÃO DA IA - CORRIGIDA PARA USAR TODAS AS FEATURES
+# FUNÇÃO PARA PREDIÇÃO DA IA
 # ============================================================================
 
 def fazer_predicao_ia(dados):
     """Faz a predição usando o modelo de IA carregado com todas as features"""
     
-    # Verificar se joblib está disponível
     if not JOBLIB_AVAILABLE:
         return None, "Biblioteca joblib não instalada"
     
@@ -603,7 +567,6 @@ def fazer_predicao_ia(dados):
         return None, "Modelo não disponível"
     
     try:
-        # Features que temos no sistema
         features_disponiveis = {
             "nitrogen": dados.get("nitrogen", 0),
             "phosphorus": dados.get("phosphorus", 0),
@@ -621,38 +584,25 @@ def fazer_predicao_ia(dados):
             "particle_density": dados.get("particle_density", 2.65)
         }
         
-        # Criar array na ordem correta das features do modelo
         valores = []
-        features_faltando = []
-        
         for feature in features:
             if feature in features_disponiveis:
                 valores.append(features_disponiveis[feature])
             else:
                 valores.append(0)
-                features_faltando.append(feature)
         
-        # Criar DataFrame com a ordem correta
         entrada_ia = pd.DataFrame([valores], columns=features)
-        
-        # Fazer predição
         predicao = modelo.predict(entrada_ia)
 
-        # Mapeamento de classes para texto legível
         def mapear_classe_fertilidade(valor):
-            """Converte valores numéricos da IA em texto legível"""
             mapeamento = {
                 0: "🔴 BAIXA FERTILIDADE",
                 1: "🟢 ALTA FERTILIDADE"
             }
-            
-            # Se for string ou outro valor, tenta converter
             if isinstance(valor, str):
                 return valor
-            
             return mapeamento.get(valor, f"Classe {valor}")
         
-        # Aplicar o mapeamento
         if hasattr(modelo, 'classes_'):
             classe_original = modelo.classes_[predicao[0]]
             classe_legivel = mapear_classe_fertilidade(classe_original)
@@ -669,22 +619,22 @@ def fazer_predicao_ia(dados):
 # ============================================================================
 
 if menu == "📊 1. Dados do Solo":
-    st.markdown("## 📋 Dados Basicos do Solo")
+    st.markdown("## 📋 Dados Básicos do Solo")
 
     col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("### 🧪 Macronutrientes")
-        nitrogen = st.text_input("🌱 Nitrogenio (N) - mg/dm3", value="30.0", key="n_input")
-        phosphorus = st.text_input("🔴 Fosforo (P) - mg/dm3", value="20.0", key="p_input")
-        potassium = st.text_input("🟡 Potassio (K+) - cmolc/dm3", value="0.25", key="k_input")
-        st.markdown("### 🌿 Materia Organica")
-        organic_matter = st.text_input("🌱 Materia Organica (g/kg)", value="25.0", key="om_input")
+        nitrogen = st.text_input("🌱 Nitrogênio (N) - mg/dm³", value="30.0", key="n_input")
+        phosphorus = st.text_input("🔴 Fósforo (P) - mg/dm³", value="20.0", key="p_input")
+        potassium = st.text_input("🟡 Potássio (K+) - cmolc/dm³", value="0.25", key="k_input")
+        st.markdown("### 🌿 Matéria Orgânica")
+        organic_matter = st.text_input("🌱 Matéria Orgânica (g/kg)", value="25.0", key="om_input")
 
     with col2:
         st.markdown("### ⚖️ Densidade")
-        bulk_density = st.text_input("📦 Densidade do Solo (g/cm3)", value="1.20", key="bd_input")
-        particle_density = st.text_input("💎 Densidade de Particula (g/cm3)", value="2.65", key="pd_input")
+        bulk_density = st.text_input("📦 Densidade do Solo (g/cm³)", value="1.20", key="bd_input")
+        particle_density = st.text_input("💎 Densidade de Partícula (g/cm³)", value="2.65", key="pd_input")
         st.markdown("### 🏺 Textura")
         sand = st.text_input("🏖️ Areia (g/kg)", value="350", key="sand_input")
         silt = st.text_input("🏞️ Silte (g/kg)", value="300", key="silt_input")
@@ -699,7 +649,7 @@ if menu == "📊 1. Dados do Solo":
 
     st.markdown("---")
 
-    if st.button("✅ SALVAR DADOS BASICOS", key="salvar_basicos"):
+    if st.button("✅ SALVAR DADOS BÁSICOS", key="salvar_basicos"):
         try:
             st.session_state.dados_basicos = {
                 "nitrogen": float(nitrogen.replace(",", ".")),
@@ -720,10 +670,10 @@ if menu == "📊 1. Dados do Solo":
             st.error(f"❌ Erro inesperado: {str(e)}")
 
 # ============================================================================
-# ABA 2 - CLASSIFICACAO
+# ABA 2 - CLASSIFICAÇÃO
 # ============================================================================
 
-elif menu == "🌱 2. Classificacao":
+elif menu == "🌱 2. Classificação":
     if "dados_basicos" not in st.session_state or not st.session_state.dados_basicos:
         st.warning("⚠️ Preencha e salve os dados na ABA 1.")
         st.stop()
@@ -750,23 +700,6 @@ elif menu == "🌱 2. Classificacao":
         dados["calcium"] = float(calcium.replace(",", "."))
         dados["magnesium"] = float(magnesium.replace(",", "."))
 
-        # CALCULAR O pH AUTOMATICAMENTE
-        def calcular_ph(dados):
-            """Calcula o pH baseado nos nutrientes do solo"""
-            try:
-                fator_acidez = dados.get('aluminum', 0.5) * 0.3
-                fator_basicidade = (
-                    dados.get('calcium', 3.0) * 0.2 +
-                    dados.get('magnesium', 1.5) * 0.15 +
-                    dados.get('potassium', 0.25) * 0.5
-                )
-                om = dados.get('organic_matter', 25) / 100
-                ph_base = 5.5 + (fator_basicidade - fator_acidez) - (om * 0.5)
-                ph = max(4.0, min(8.0, ph_base))
-                return round(ph, 1)
-            except Exception:
-                return 6.0
-        
         dados["ph"] = calcular_ph(dados)
         st.info(f"🧪 pH calculado automaticamente: **{dados['ph']}**")
 
@@ -825,11 +758,11 @@ elif menu == "🌱 2. Classificacao":
         st.code(traceback.format_exc())
 
 # ============================================================================
-# ABA 3 - RELATORIO
+# ABA 3 - RELATÓRIO
 # ============================================================================
 
-elif menu == "📈 3. Relatorio":
-    st.markdown("## 📈 Relatorio Tecnico")
+elif menu == "📈 3. Relatório":
+    st.markdown("## 📈 Relatório Técnico")
 
     if "v_percent" not in st.session_state or "dados_calculados" not in st.session_state or "cultura" not in st.session_state:
         st.warning("⚠️ Execute primeiro a classificação na ABA 2.")
@@ -843,20 +776,20 @@ elif menu == "📈 3. Relatorio":
     cultura = st.session_state.cultura
 
     relatorio = pd.DataFrame({
-        "Parametro": [
-            "pH", "Nitrogenio (N)", "Fosforo (P)", "Potassio (K+)",
-            "Calcio (Ca2+)", "Magnesio (Mg2+)", "Aluminio (Al3+)", "H + Al",
-            "Soma de Bases (SB)", "CTC Potencial", "Saturacao por Bases (V%)",
-            "Saturacao por Al (m%)", "Materia Organica", "Densidade do Solo"
+        "Parâmetro": [
+            "pH", "Nitrogênio (N)", "Fósforo (P)", "Potássio (K+)",
+            "Cálcio (Ca²⁺)", "Magnésio (Mg²⁺)", "Alumínio (Al³⁺)", "H + Al",
+            "Soma de Bases (SB)", "CTC Potencial", "Saturação por Bases (V%)",
+            "Saturação por Al (m%)", "Matéria Orgânica", "Densidade do Solo"
         ],
         "Valor": [
-            f"{dados['ph']:.1f}", f"{dados['nitrogen']:.1f} mg/dm3",
-            f"{dados['phosphorus']:.1f} mg/dm3", f"{dados['potassium']:.2f} cmolc/dm3",
-            f"{dados['calcium']:.2f} cmolc/dm3", f"{dados['magnesium']:.2f} cmolc/dm3",
-            f"{dados['aluminum']:.2f} cmolc/dm3", f"{dados['h_al']:.2f} cmolc/dm3",
-            f"{sb:.2f} cmolc/dm3", f"{ctc_potencial:.2f} cmolc/dm3",
+            f"{dados['ph']:.1f}", f"{dados['nitrogen']:.1f} mg/dm³",
+            f"{dados['phosphorus']:.1f} mg/dm³", f"{dados['potassium']:.2f} cmolc/dm³",
+            f"{dados['calcium']:.2f} cmolc/dm³", f"{dados['magnesium']:.2f} cmolc/dm³",
+            f"{dados['aluminum']:.2f} cmolc/dm³", f"{dados['h_al']:.2f} cmolc/dm³",
+            f"{sb:.2f} cmolc/dm³", f"{ctc_potencial:.2f} cmolc/dm³",
             f"{v_percent:.1f}%", f"{m_percent:.1f}%",
-            f"{dados['organic_matter']:.1f} g/kg", f"{dados['bulk_density']:.2f} g/cm3"
+            f"{dados['organic_matter']:.1f} g/kg", f"{dados['bulk_density']:.2f} g/cm³"
         ]
     })
 
@@ -864,7 +797,7 @@ elif menu == "📈 3. Relatorio":
 
     csv = relatorio.to_csv(index=False).encode("utf-8")
     st.download_button(
-        label="📥 Baixar Relatorio (CSV)",
+        label="📥 Baixar Relatório (CSV)",
         data=csv,
         file_name="relatorio_solo.csv",
         mime="text/csv",
@@ -899,10 +832,10 @@ elif menu == "📈 3. Relatorio":
         st.success("✅ Potássio em nível adequado")
 
 # ============================================================================
-# ABA 4 - METODOS
+# ABA 4 - MÉTODOS
 # ============================================================================
 
-elif menu == "ℹ️ 4. Metodos":
+elif menu == "ℹ️ 4. Métodos":
     st.markdown("## ℹ️ Métodos Utilizados")
 
     with st.expander("📊 Saturação por Bases (V%)"):
