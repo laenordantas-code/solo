@@ -118,348 +118,236 @@ st.set_page_config(
 )
 
 # ============================================================================
-# CSS PERSONALIZADO - DESIGN PREMIUM MODERNO
+# CSS PERSONALIZADO - DESIGN TOTALMENTE REFORMULADO
 # ============================================================================
 
 st.markdown("""
 <style>
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ==========================================================================
-   IMPORTAÇÃO DE FONTE PREMIUM
-========================================================================== */
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
-
-/* ==========================================================================
-   FUNDO PRINCIPAL - GRADIENTE SOFISTICADO
-========================================================================== */
-
+/* Fundo principal com gradiente suave */
 .stApp {
-    background: radial-gradient(circle at 0% 0%, #0a0f1e, #060912) !important;
-    font-family: 'Inter', sans-serif !important;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%) !important;
 }
 
-.main > div {
-    background: transparent !important;
+/* Container principal */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-/* ==========================================================================
-   TEXTOS GERAIS
-========================================================================== */
-
-html, body, p, span, div, li, label {
-    color: #e2e8f0 !important;
-}
-
-/* ==========================================================================
-   TITULOS E SUBTITULOS
-========================================================================== */
-
-h1, h2, h3, h4, h5, h6 {
-    background: linear-gradient(135deg, #c084fc, #60a5fa);
-    -webkit-background-clip: text;
-    background-clip: text;
+/* Títulos com gradiente */
+h1, h2, h3 {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
     color: transparent !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.02em !important;
-}
-
-/* ==========================================================================
-   SIDEBAR - VIDRO FOSCO (GLASSMORPHISM)
-========================================================================== */
-
-section[data-testid="stSidebar"] {
-    background: rgba(15, 23, 42, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    border-right: 1px solid rgba(96, 165, 250, 0.2) !important;
-    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.3) !important;
-}
-
-section[data-testid="stSidebar"] * {
-    color: #f1f5f9 !important;
-}
-
-/* ==========================================================================
-   INPUTS - DESIGN LUXO
-========================================================================== */
-
-.stTextInput input,
-.stNumberInput input,
-textarea,
-input {
-    background: rgba(30, 41, 59, 0.9) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(96, 165, 250, 0.3) !important;
-    border-radius: 16px !important;
-    padding: 12px 16px !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-}
-
-.stTextInput input:focus,
-.stNumberInput input:focus,
-textarea:focus,
-input:focus {
-    border-color: #60a5fa !important;
-    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2) !important;
-    outline: none !important;
-}
-
-/* ==========================================================================
-   SELECTBOX PREMIUM
-========================================================================== */
-
-.stSelectbox div[data-baseweb="select"] {
-    background: rgba(30, 41, 59, 0.9) !important;
-    border-radius: 16px !important;
-    border: 1px solid rgba(96, 165, 250, 0.3) !important;
-}
-
-.stSelectbox span {
-    color: #ffffff !important;
-    font-weight: 500 !important;
-}
-
-/* ==========================================================================
-   BOTÕES - EFEITO NEON
-========================================================================== */
-
-.stButton button {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 40px !important;
-    padding: 0.75rem 2rem !important;
     font-weight: 700 !important;
-    font-size: 1rem !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    letter-spacing: 0.3px !important;
-    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3) !important;
 }
 
-.stButton button:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px 0 rgba(139, 92, 246, 0.4) !important;
+/* Sidebar elegante */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0a0f1a 0%, #0d1117 100%) !important;
+    border-right: 1px solid rgba(132, 250, 176, 0.15) !important;
 }
 
-/* ==========================================================================
-   CARDS PRINCIPAIS (RESULTADOS)
-========================================================================== */
-
-.result-card {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.5)) !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(96, 165, 250, 0.25) !important;
-    border-radius: 28px !important;
-    padding: 28px !important;
-    margin-top: 20px !important;
-    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5) !important;
-}
-
-.result-card h2 {
-    font-size: 1.8rem !important;
-    margin-bottom: 12px !important;
-}
-
-/* ==========================================================================
-   CAIXAS DE MÉTRICAS
-========================================================================== */
-
-.result-box {
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6)) !important;
-    backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(96, 165, 250, 0.2) !important;
-    border-radius: 24px !important;
-    padding: 20px !important;
-    margin-bottom: 18px !important;
+/* Cards de input */
+div[data-testid="stTextInput"] > div > div > input,
+div[data-testid="stNumberInput"] > div > div > input {
+    background-color: #1a1f2e !important;
+    border: 1px solid #2a2f3e !important;
+    border-radius: 12px !important;
+    color: #e6edf3 !important;
+    padding: 10px 14px !important;
     transition: all 0.3s ease !important;
-    text-align: center !important;
 }
 
-.result-box:hover {
-    transform: translateY(-5px);
-    border-color: rgba(139, 92, 246, 0.5) !important;
-    box-shadow: 0 12px 28px -8px rgba(139, 92, 246, 0.3) !important;
+div[data-testid="stTextInput"] > div > div > input:focus,
+div[data-testid="stNumberInput"] > div > div > input:focus {
+    border-color: #84fab0 !important;
+    box-shadow: 0 0 0 2px rgba(132, 250, 176, 0.2) !important;
 }
 
-.result-title {
-    color: #94a3b8 !important;
-    font-size: 0.9rem !important;
+/* Selectbox */
+div[data-baseweb="select"] > div {
+    background-color: #1a1f2e !important;
+    border: 1px solid #2a2f3e !important;
+    border-radius: 12px !important;
+}
+
+/* Botões com efeito moderno */
+.stButton > button {
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%) !important;
+    color: #0d1117 !important;
     font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
-    text-transform: uppercase !important;
-    margin-bottom: 12px !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 0.6rem 1.5rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 15px rgba(132, 250, 176, 0.2) !important;
 }
 
-.result-value {
-    background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent !important;
-    font-size: 2.5rem !important;
-    font-weight: 900 !important;
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(132, 250, 176, 0.3) !important;
 }
 
-/* ==========================================================================
-   METRICS STREAMLIT PERSONALIZADAS
-========================================================================== */
-
+/* Cards de resultado */
 div[data-testid="stMetric"] {
-    background: rgba(15, 23, 42, 0.7) !important;
-    backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(96, 165, 250, 0.2) !important;
+    background: linear-gradient(135deg, #1a1f2e 0%, #161b22 100%) !important;
+    border: 1px solid rgba(132, 250, 176, 0.2) !important;
     border-radius: 20px !important;
-    padding: 1.2rem !important;
+    padding: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-3px) !important;
+    border-color: #84fab0 !important;
+    box-shadow: 0 10px 30px rgba(132, 250, 176, 0.15) !important;
 }
 
 div[data-testid="stMetricLabel"] {
-    color: #94a3b8 !important;
-    font-weight: 600 !important;
-    font-size: 0.85rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
+    color: #8b949e !important;
+    font-weight: 500 !important;
 }
 
 div[data-testid="stMetricValue"] {
-    background: linear-gradient(135deg, #ffffff, #94a3b8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent !important;
-    font-size: 2rem !important;
-    font-weight: 900 !important;
-}
-
-/* ==========================================================================
-   DATAFRAME - DESIGN MODERNO
-========================================================================== */
-
-.dataframe {
-    background: rgba(15, 23, 42, 0.7) !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    border: 1px solid rgba(96, 165, 250, 0.2) !important;
-}
-
-.dataframe th {
-    background: linear-gradient(135deg, #1e293b, #0f172a) !important;
-    color: #c084fc !important;
+    color: #84fab0 !important;
     font-weight: 700 !important;
-    padding: 12px !important;
 }
 
-.dataframe td {
-    background: rgba(30, 41, 59, 0.5) !important;
-    color: #e2e8f0 !important;
-    padding: 10px !important;
-}
-
-/* ==========================================================================
-   ALERTAS E INFOS
-========================================================================== */
-
+/* Alertas e infos */
 .stAlert {
-    border-radius: 20px !important;
+    border-radius: 16px !important;
     border: none !important;
-    background: rgba(15, 23, 42, 0.8) !important;
-    backdrop-filter: blur(8px) !important;
+    background: rgba(26, 31, 46, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-/* ==========================================================================
-   EXPANDER PREMIUM
-========================================================================== */
-
+/* Expanders */
 .streamlit-expanderHeader {
-    background: linear-gradient(135deg, #1e293b, #0f172a) !important;
-    color: #c084fc !important;
-    border-radius: 16px !important;
-    font-weight: 700 !important;
-    border: 1px solid rgba(96, 165, 250, 0.2) !important;
+    background: linear-gradient(90deg, #1a1f2e 0%, #161b22 100%) !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(132, 250, 176, 0.15) !important;
+    color: #84fab0 !important;
+    font-weight: 600 !important;
 }
 
 .streamlit-expanderContent {
-    background: rgba(15, 23, 42, 0.6) !important;
-    border-radius: 0 0 16px 16px !important;
-    border: 1px solid rgba(96, 165, 250, 0.1) !important;
+    background: #0d1117 !important;
+    border-radius: 0 0 14px 14px !important;
+    border: 1px solid rgba(132, 250, 176, 0.1) !important;
     border-top: none !important;
 }
 
-/* ==========================================================================
-   TABS
-========================================================================== */
+/* Separador */
+hr {
+    margin: 2rem 0 !important;
+    border: none !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #84fab0, #8fd3f4, transparent) !important;
+}
 
+/* Tabs customizadas */
 button[data-baseweb="tab"] {
     background: transparent !important;
-    color: #94a3b8 !important;
+    color: #8b949e !important;
+    font-weight: 500 !important;
     border-radius: 40px !important;
-    font-weight: 600 !important;
+    padding: 0.5rem 1rem !important;
     transition: all 0.3s ease !important;
 }
 
 button[data-baseweb="tab"][aria-selected="true"] {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
-    color: white !important;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%) !important;
+    color: #0d1117 !important;
 }
 
-/* ==========================================================================
-   LINHA DIVISÓRIA
-========================================================================== */
-
-hr {
-    border: none !important;
-    height: 1px !important;
-    background: linear-gradient(90deg, transparent, #3b82f6, #8b5cf6, #c084fc, transparent) !important;
-    margin: 2rem 0 !important;
+/* Dataframe */
+.dataframe {
+    background: #1a1f2e !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
 }
 
-/* ==========================================================================
-   SCROLLBAR PERSONALIZADA
-========================================================================== */
+.dataframe th {
+    background: #0d1117 !important;
+    color: #84fab0 !important;
+    font-weight: 600 !important;
+}
 
+.dataframe td {
+    color: #e6edf3 !important;
+}
+
+/* Cabeçalho principal */
+.custom-header {
+    background: linear-gradient(135deg, rgba(26, 31, 46, 0.8), rgba(13, 17, 23, 0.9));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(132, 250, 176, 0.2);
+    border-radius: 30px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Radio buttons horizontais */
+div[role="radiogroup"] {
+    gap: 0.5rem !important;
+    justify-content: center !important;
+}
+
+div[role="radiogroup"] label {
+    background: #1a1f2e !important;
+    border-radius: 40px !important;
+    padding: 0.5rem 1.2rem !important;
+    border: 1px solid #2a2f3e !important;
+    color: #8b949e !important;
+}
+
+div[role="radiogroup"] label[data-baseweb="radio"]:has(input:checked) {
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%) !important;
+    color: #0d1117 !important;
+    border-color: transparent !important;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #0d1117;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+/* Mensagens de sucesso/erro */
+.stSuccess, .stError, .stWarning, .stInfo {
+    border-radius: 14px !important;
 }
-
-/* ==========================================================================
-   CARD HEADER PRINCIPAL
-========================================================================== */
-
-.main-header {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.1));
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(96, 165, 250, 0.2);
-    border-radius: 32px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
 # ============================================================================
-# CABECALHO PREMIUM
+# CABECALHO PERSONALIZADO
 # ============================================================================
 
 st.markdown("""
-<div class="main-header">
-    <h1 style="background: linear-gradient(135deg, #c084fc, #60a5fa); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.5rem; margin-bottom: 0.5rem;">🌾 Classificador Inteligente de Fertilidade do Solo</h1>
-    <p style="color: #94a3b8; font-size: 1.1rem;">Baseado no Sistema Brasileiro de Classificação de Solos (SiBCS) - Embrapa</p>
+<div class="custom-header">
+    <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">🌾 Classificador Inteligente de Fertilidade do Solo</h1>
+    <p style="color: #8b949e; font-size: 1rem;">Sistema Brasileiro de Classificação de Solos (SiBCS) - Embrapa</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -468,8 +356,8 @@ st.markdown("""
 # ============================================================================
 
 with st.sidebar:
-    st.markdown("<div style='text-align: center; margin-bottom: 1rem;'>", unsafe_allow_html=True)
-    st.image("https://cdn-icons-png.flaticon.com/512/2934/2934128.png", width=70)
+    st.markdown("<div style='text-align: center; margin: 1rem 0;'>", unsafe_allow_html=True)
+    st.image("https://cdn-icons-png.flaticon.com/512/2934/2934128.png", width=80)
     st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("### 📊 Sobre o Sistema")
@@ -504,7 +392,7 @@ with st.sidebar:
             st.caption("Instale joblib para ativar a IA")
 
     st.markdown("---")
-    st.caption("Versão 3.0 — Design Premium")
+    st.caption("Versão 4.0 — Design Premium")
     st.caption("Desenvolvido em Streamlit")
 
 # ============================================================================
